@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap");
+
+body {
+    font-size: 2.5vh;
+    color: #1F2750;
+    font-family: 'Comfortaa', sans-serif;
+    margin: 0 auto;
+    background-color: #AFB9C0;
+}
+
+h1 {
+    color: #1F2750;
+    text-align: center;
+}
+
+h5 {
+    color: #1F2750;
+    text-align: left;
+    margin: 0;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.list {
+    width: auto;
+    height: auto;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    padding: 1.5vh;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 15%);
+
+}
+
+.input-field {
+    height: 7vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 5px;
+}
+
+.mainInput {
+    grid-row: 1/ 2;
+    grid-column: 1/ span 2;
+    background-color: #AFB9C0;
+    border: 1px solid #1F2750;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 1.6vh;
+    color: #1F2750;
+}
+
+.list-btn {
+    background-color: #AFB9C0;
+    border: 0.5px solid #1F2750;
+    color: #1F2750;
+    font-size: 1.6vh;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.view-options {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    border-top: 1px solid #1F2750;
+    border-bottom: 1px solid #1F2750;
+    font-size: 2vh;
+    margin: 0;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.7vh;
+}
+
+.filter {
+    grid-column: 1/ span 1;
+}
+
+.sort {
+    grid-column: 2/ span 1;
+}
+
+.list-radio input {
+    margin: 0;
+    margin-right: 3px;
+    margin-top: 1px;
+}
+
+.noActive {
+    display: none;
+}

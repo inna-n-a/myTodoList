@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="https://unpkg.com/vue@next"></script>
+    <script defer src="./main.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="list" id="app">
+        <h1>СПИСОК ДЕЛ</h1>
+        <div class="input-field">
+            <input type="text" v-model="itemForAdd" class="mainInput">
+            <button class="list-btn" v-on:click="add">добавить задачу</button>
+            <button class="list-btn" v-on:click="del(index)">удалить задачу</button>
+        </div>
+        <div class="view-options">
+            <div class="filter">
+                <h5>ПОКАЗАТЬ:</h5>
+                <div class="list-radio">
+                    <input type="radio" name="filter" id="check" v-on:click="filter1">
+                    <label for="check">выполненные задачи</label>
+                </div>
+                <div class="list-radio">
+                    <input type="radio" name="filter" id="check2" v-on:click="filter2">
+                    <label for="check2">невыполненные задачи</label>
+                </div>
+                <div class="list-radio">
+                    <input type="radio" name="filter" id="check3" v-on:click="filter3">
+                    <label for="check3">все задачи</label>
+                </div>
+            </div>
+            <div class="sort">
+                <h5>СОРТИРОВАТЬ:</h5>
+                <div class="list-radio">
+                    <input type="radio" name="sort" id="sort1" v-on:click="sort1">
+                    <label for="sort1">по названию</label>
+                </div>
+                <div class="list-radio">
+                    <input type="radio" name="sort" id="sort2" v-on:click="sort2">
+                    <label for="sort2">сначала новые</label>
+                </div>
+                <div class="list-radio">
+                    <input type="radio" name="sort" id="sort3" v-on:click="sort3">
+                    <label for="sort3">сначала старые</label>
+                </div>
+            </div>
+        </div>
+        <todo-item v-for="(todo,index) in todoList" :todo="todo" :key="todo.id" :index="index"
+            v-on:complete-todo="makeDone(index)" v-on:dblclick="del(index)" :class="{noActive: todo.noActive}">
+        </todo-item>
+    </div>
+
+</body>
+
+</html>

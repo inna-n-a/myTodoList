@@ -89,9 +89,6 @@ const app = Vue.createApp({
             this.todoList.sort((a, b) => a.id > b.id ? 1 : -1);
 
         },
-
-
-
     },
 
     mounted() {
@@ -103,6 +100,5 @@ const app = Vue.createApp({
     */
     }
 });
-
 
 app.mount("#app");
